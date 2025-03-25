@@ -1,0 +1,56 @@
+name: HomeSchooApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: 17.0
+    macOS: 14.0
+    tvOS: 17.0
+    visionOS: 1.0
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk.git
+    from: "10.0.0"
+targets:
+  HomeSchooApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: HomeSchooApp
+    resources:
+      - path: HomeSchooApp/GoogleService-Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: HomeSchooApp/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.HomeSchooApp
+        DEVELOPMENT_TEAM: TTTFBZBMNC
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: Apple Development
+        SWIFT_VERSION: 5.0
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+        SWIFT_OPTIMIZATION_LEVEL: -Onone
+        ENABLE_BITCODE: NO
+    dependencies:
+      - package: Firebase
+        product: FirebaseAnalytics
+      - package: Firebase
+        product: FirebaseDatabase
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseStorage
+    info:
+      path: HomeSchooApp/Info.plist
+      properties:
+        LSRequiresIPhoneOS: true
+        UILaunchStoryboardName: LaunchScreen
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight 
