@@ -2,11 +2,14 @@ name: PETS_app
 options:
   bundleIdPrefix: com.example
   deploymentTarget:
-    iOS: 15.0
+    iOS: 16.0
 packages:
   Firebase:
-    url: https://github.com/firebase/firebase-ios-sdk.git
+    url: https://github.com/firebase/firebase-ios-sdk
     from: "10.0.0"
+  GoogleSignIn:
+    url: https://github.com/google/GoogleSignIn-iOS
+    from: "7.0.0"
 targets:
   PETS_app:
     type: application
@@ -21,29 +24,33 @@ targets:
     settings:
       base:
         INFOPLIST_FILE: Sources/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.petsapp
-        DEVELOPMENT_TEAM: ""
-        CODE_SIGN_STYLE: Manual
-        CODE_SIGN_IDENTITY: ""
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.PETS_app
+        IPHONEOS_DEPLOYMENT_TARGET: 16.0
+        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_BITCODE: false
         SWIFT_VERSION: 5.0
-        ENABLE_BITCODE: NO
-        IPHONEOS_DEPLOYMENT_TARGET: 15.0
         TARGETED_DEVICE_FAMILY: 1,2
-        SWIFT_EMIT_LOC_STRINGS: YES
-        SWIFT_INSTALL_OBJC_HEADER: NO
-        SWIFT_OBJC_INTERFACE_HEADER_NAME: PETS_app-Swift.h
-        SWIFT_MODULE_NAME: PETS_app
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_CFBundleURLTypes: 
+          - CFBundleURLSchemes: 
+            - com.googleusercontent.apps.1-672591439997-ios-4c8d078907da4e46376914
     dependencies:
       - package: Firebase
-        product: FirebaseAnalytics
-      - package: Firebase
-        product: FirebaseDatabase
-      - package: Firebase
-        product: FirebaseFirestore
-      - package: Firebase
-        product: FirebaseAuth
-      - package: Firebase
-        product: FirebaseStorage
+        products:
+          - FirebaseAuth
+          - FirebaseFirestore
+          - FirebaseStorage
+          - FirebaseAnalytics
+      - package: GoogleSignIn
+        products:
+          - GoogleSignIn
+          - GoogleSignInSwift
     info:
       path: Sources/Info.plist
       properties:
@@ -59,4 +66,7 @@ targets:
         NSLocationWhenInUseUsageDescription: "We need your location to find nearby study groups and learning resources."
         NSLocationAlwaysAndWhenInUseUsageDescription: "We need your location to find nearby study groups and learning resources."
         NSCameraUsageDescription: "We need camera access to let you share photos with your study groups."
-        NSPhotoLibraryUsageDescription: "We need photo library access to let you share photos with your study groups." 
+        NSPhotoLibraryUsageDescription: "We need photo library access to let you share photos with your study groups."
+        CFBundleURLTypes:
+          - CFBundleURLSchemes:
+              - com.googleusercontent.apps.YOUR_GOOGLE_CLIENT_ID 
