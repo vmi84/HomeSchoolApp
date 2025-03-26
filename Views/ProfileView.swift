@@ -264,41 +264,6 @@ struct StatCard: View {
     }
 }
 
-struct EditProfileView: View {
-    @Environment(\.dismiss) private var dismiss
-    @State private var studentName = "Student Name"
-    @State private var gradeLevel = "Grade Level"
-    
-    var body: some View {
-        NavigationStack {
-            Form {
-                Section {
-                    TextField("Student Name", text: $studentName)
-                    TextField("Grade Level", text: $gradeLevel)
-                }
-                
-                Section {
-                    Button("Save") {
-                        // Save profile changes
-                        dismiss()
-                    }
-                    .frame(maxWidth: .infinity)
-                    .foregroundStyle(.blue)
-                }
-            }
-            .navigationTitle("Edit Profile")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
-                        dismiss()
-                    }
-                }
-            }
-        }
-    }
-}
-
 #Preview {
     ProfileView()
         .modelContainer(for: UserSubject.self, inMemory: true)

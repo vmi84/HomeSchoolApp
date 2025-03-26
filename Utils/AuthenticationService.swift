@@ -1,13 +1,6 @@
+import Foundation
 import SwiftUI
 import SwiftData
-
-// Stub Firebase Core
-#if DEBUG
-enum FirebaseApp {
-    static func configure() {
-        print("Firebase configured (stub)")
-    }
-}
 
 class AuthenticationService: ObservableObject {
     @Published var user: User?
@@ -25,9 +18,11 @@ class AuthenticationService: ObservableObject {
     }
     
     init() {
+        #if DEBUG
         // Mock user for testing
         self.user = User(uid: "test-uid", email: "test@example.com")
         self.isAuthenticated = true
+        #endif
     }
     
     func signIn(email: String, password: String) {
@@ -39,5 +34,13 @@ class AuthenticationService: ObservableObject {
         self.user = nil
         self.isAuthenticated = false
     }
-}
-#endif 
+    
+    func signUp(email: String, password: String, name: String) async throws {
+        // TODO: Implement actual user registration
+        // For now, we'll just simulate a successful registration
+        DispatchQueue.main.async {
+            self.isAuthenticated = true
+            self.user = User(uid: "1", email: email)
+        }
+    }
+} 

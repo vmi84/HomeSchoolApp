@@ -1,33 +1,32 @@
 // swift-tools-version: 5.9
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "HomeSchooApp",
+    name: "PETS_app",
     platforms: [
-        .iOS(.v17),
-        .macOS(.v14)
+        .iOS(.v17)
     ],
     products: [
-        .library(
-            name: "HomeSchooApp",
-            targets: ["HomeSchooApp"]),
+        .executable(
+            name: "PETS_app",
+            targets: ["PETS_app"]),
     ],
     dependencies: [
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.0.0"),
     ],
     targets: [
-        .target(
-            name: "HomeSchooApp",
+        .executableTarget(
+            name: "PETS_app",
             dependencies: [
                 .product(name: "FirebaseAuth", package: "firebase-ios-sdk"),
                 .product(name: "FirebaseFirestore", package: "firebase-ios-sdk"),
                 .product(name: "FirebaseStorage", package: "firebase-ios-sdk"),
                 .product(name: "FirebaseDatabase", package: "firebase-ios-sdk"),
-                .product(name: "FirebaseFirestoreSwift", package: "firebase-ios-sdk"),
-            ]),
-        .testTarget(
-            name: "HomeSchooAppTests",
-            dependencies: ["HomeSchooApp"]),
+            ],
+            path: ".",
+            exclude: ["Tests", ".build", ".git"]
+        ),
     ]
 ) 

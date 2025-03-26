@@ -38,5 +38,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to find nearby educational resources and connect you with local homeschooling communities.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location to find nearby educational resources and connect you with local homeschooling communities.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to find nearby educational resources and connect you with local homeschooling communities.</string>
 </dict>
 </plist>

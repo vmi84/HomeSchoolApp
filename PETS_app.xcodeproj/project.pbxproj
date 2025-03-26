@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,7 @@
 		486E85F78CC7E62B500F4F25 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4D6AF6EEAFB1897DD797D048 /* FirebaseDatabase */; };
 		66016532623DF7BB2207169C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709806EAD2FB1AE590B7A211 /* ContentView.swift */; };
 		A62D972B815B1F738FC12DB4 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F9FF60722DC17E90D3285E /* EditProfileView.swift */; };
-		A8081BEE761F52F6ED164A11 /* HomeSchooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538470BB4DBB786388CEC0D6 /* HomeSchooApp.swift */; };
+		A8081BEE761F52F6ED164A11 /* PETS_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538470BB4DBB786388CEC0D6 /* PETS_appApp.swift */; };
 		AD98C0A1A1C63A4CE2B58A95 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 99B8EC98C4C2589CAA2843C6 /* FirebaseStorage */; };
 		C630410D3D947904B534E30B /* SubjectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192AFA571503EDC1D18FB05 /* SubjectPickerView.swift */; };
 		CCFDD8A9AAB9A86052C91DCC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 613D7F19F85118C7257A0768 /* FirebaseAuth */; };
@@ -24,23 +24,29 @@
 		EB9C11F30629AAFF85CA19A8 /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A86159436349C2ED91C27C /* ResourcesView.swift */; };
 		EFCEB3A426ACDEBFCB7A1C5E /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80982C64C8AD522AFC0F41A2 /* ConnectionsView.swift */; };
 		FBC45A20FEDBDEC94CF69B8F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106E100E77F6BD05B510A3E /* ProfileView.swift */; };
+		ABC123DEF456GHI789JKL /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC123DEF456GHI789JKM /* AuthenticationService.swift */; };
+		XYZ987WVU654TSR321QPO /* AppImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = XYZ987WVU654TSR321QPP /* AppImports.swift */; };
+		PQR123STU456VWX789YZA /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6G7H8I9J0K1 /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1106E100E77F6BD05B510A3E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		1192AFA571503EDC1D18FB05 /* SubjectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectPickerView.swift; sourceTree = "<group>"; };
-		32FADFFF8B8255406A47C725 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		3822C991ED3AA350CEF66F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		455E3DD4098B5C1EAE7DB9B6 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
-		538470BB4DBB786388CEC0D6 /* HomeSchooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSchooApp.swift; sourceTree = "<group>"; };
-		709806EAD2FB1AE590B7A211 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		72857D4947E7F47EAE122814 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		80982C64C8AD522AFC0F41A2 /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
-		80E6F5EBC2A3563761625DDA /* HomeSchooApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HomeSchooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7A86159436349C2ED91C27C /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
-		B1F9FF60722DC17E90D3285E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
-		D2F3E65A0937AC60A2D2F956 /* CustomSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubjectView.swift; sourceTree = "<group>"; };
-		F4662A49DFD4B7EF857F598D /* SubjectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCategoryView.swift; sourceTree = "<group>"; };
+		1106E100E77F6BD05B510A3E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = "Views/ProfileView.swift"; sourceTree = SOURCE_ROOT; };
+		1192AFA571503EDC1D18FB05 /* SubjectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SubjectPickerView.swift; path = "Views/SubjectPickerView.swift"; sourceTree = SOURCE_ROOT; };
+		32FADFFF8B8255406A47C725 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = "Views/ProgressView.swift"; sourceTree = SOURCE_ROOT; };
+		3822C991ED3AA350CEF66F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		455E3DD4098B5C1EAE7DB9B6 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SharedModels.swift; path = SharedModels.swift; sourceTree = SOURCE_ROOT; };
+		538470BB4DBB786388CEC0D6 /* PETS_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PETS_appApp.swift; path = PETS_appApp.swift; sourceTree = SOURCE_ROOT; };
+		709806EAD2FB1AE590B7A211 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ContentView.swift; sourceTree = SOURCE_ROOT; };
+		72857D4947E7F47EAE122814 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = GoogleService-Info.plist; path = GoogleService-Info.plist; sourceTree = SOURCE_ROOT; };
+		80982C64C8AD522AFC0F41A2 /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConnectionsView.swift; path = "Views/ConnectionsView.swift"; sourceTree = SOURCE_ROOT; };
+		80E6F5EBC2A3563761625DDA /* PETS_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PETS_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A86159436349C2ED91C27C /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResourcesView.swift; path = "Views/ResourcesView.swift"; sourceTree = SOURCE_ROOT; };
+		B1F9FF60722DC17E90D3285E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileView.swift; path = "Views/EditProfileView.swift"; sourceTree = SOURCE_ROOT; };
+		D2F3E65A0937AC60A2D2F956 /* CustomSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSubjectView.swift; path = "Views/CustomSubjectView.swift"; sourceTree = SOURCE_ROOT; };
+		F4662A49DFD4B7EF857F598D /* SubjectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SubjectCategoryView.swift; path = "Views/SubjectCategoryView.swift"; sourceTree = SOURCE_ROOT; };
+		ABC123DEF456GHI789JKM /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "Utils/AuthenticationService.swift"; sourceTree = SOURCE_ROOT; };
+		XYZ987WVU654TSR321QPP /* AppImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppImports.swift; path = "Utils/AppImports.swift"; sourceTree = SOURCE_ROOT; };
+		A1B2C3D4E5F6G7H8I9J0K1 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = "Utils/ServiceManager.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,7 @@
 		2C8B770F3C55BDB622D2D7B7 = {
 			isa = PBXGroup;
 			children = (
-				F2A724515A19CD0C7C9A63AD /* HomeSchooApp */,
+				F2A724515A19CD0C7C9A63AD /* Sources */,
 				E27700E48AFCF25685A44A4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,36 +85,61 @@
 				F4662A49DFD4B7EF857F598D /* SubjectCategoryView.swift */,
 				1192AFA571503EDC1D18FB05 /* SubjectPickerView.swift */,
 			);
-			path = Views;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E27700E48AFCF25685A44A4F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80E6F5EBC2A3563761625DDA /* HomeSchooApp.app */,
+				80E6F5EBC2A3563761625DDA /* PETS_app.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F2A724515A19CD0C7C9A63AD /* HomeSchooApp */ = {
+		F2A724515A19CD0C7C9A63AD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				709806EAD2FB1AE590B7A211 /* ContentView.swift */,
 				72857D4947E7F47EAE122814 /* GoogleService-Info.plist */,
-				538470BB4DBB786388CEC0D6 /* HomeSchooApp.swift */,
+				538470BB4DBB786388CEC0D6 /* PETS_appApp.swift */,
 				3822C991ED3AA350CEF66F75 /* Info.plist */,
 				455E3DD4098B5C1EAE7DB9B6 /* SharedModels.swift */,
 				35E26D47C6B168B2F639BC92 /* Views */,
+				A1B2C3D4E5F6G7H8I9J0K1L /* Utils */,
 			);
-			path = HomeSchooApp;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F2A724525A19CD0C7C9A63AD /* HomeSchoolApp */ = {
+			isa = PBXGroup;
+			children = (
+				709806EAD2FB1AE590B7A211 /* ContentView.swift */,
+				72857D4947E7F47EAE122814 /* GoogleService-Info.plist */,
+				538470BB4DBB786388CEC0D6 /* HomeSchoolApp.swift */,
+				3822C991ED3AA350CEF66F75 /* Info.plist */,
+				455E3DD4098B5C1EAE7DB9B6 /* SharedModels.swift */,
+				35E26D47C6B168B2F639BC92 /* Views */,
+				A1B2C3D4E5F6G7H8I9J0K1L /* Utils */,
+			);
+			path = HomeSchoolApp;
+			sourceTree = "<group>";
+		};
+		A1B2C3D4E5F6G7H8I9J0K1L /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ABC123DEF456GHI789JKM /* AuthenticationService.swift */,
+				XYZ987WVU654TSR321QPP /* AppImports.swift */,
+				A1B2C3D4E5F6G7H8I9J0K1 /* ServiceManager.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EEEA894BC5C4429AD09290AA /* HomeSchooApp */ = {
+		80E6F5EBC2A3563761625DDA /* PETS_app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A168FB443CE4DA03C520B9A /* Build configuration list for PBXNativeTarget "HomeSchooApp" */;
+			buildConfigurationList = 1234567890ABCDEF /* Build configuration list for PBXNativeTarget "PETS_app" */;
 			buildPhases = (
 				BC3CFF47A8B81E8FF367D86F /* Sources */,
 				346CC51C5F8E8E8E7C2246F5 /* Resources */,
@@ -118,7 +149,7 @@
 			);
 			dependencies = (
 			);
-			name = HomeSchooApp;
+			name = "PETS_app";
 			packageProductDependencies = (
 				6CE8ACFC39F8E6C5CEE5926D /* FirebaseAnalytics */,
 				4D6AF6EEAFB1897DD797D048 /* FirebaseDatabase */,
@@ -126,8 +157,8 @@
 				613D7F19F85118C7257A0768 /* FirebaseAuth */,
 				99B8EC98C4C2589CAA2843C6 /* FirebaseStorage */,
 			);
-			productName = HomeSchooApp;
-			productReference = 80E6F5EBC2A3563761625DDA /* HomeSchooApp.app */;
+			productName = "PETS_app";
+			productReference = 80E6F5EBC2A3563761625DDA /* PETS_app.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,21 +168,22 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					EEEA894BC5C4429AD09290AA = {
-						DevelopmentTeam = TTTFBZBMNC;
+					80E6F5EBC2A3563761625DDA = {
+						CreatedOnToolsVersion = 15.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 9C65EEFB33FD0E4D458FD0D4 /* Build configuration list for PBXProject "HomeSchooApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 9C65EEFB33FD0E4D458FD0D4 /* Build configuration list for PBXProject "HomeSchoolApp" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				Base,
 				en,
+				Base,
 			);
 			mainGroup = 2C8B770F3C55BDB622D2D7B7;
 			packageReferences = (
@@ -160,7 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EEEA894BC5C4429AD09290AA /* HomeSchooApp */,
+				80E6F5EBC2A3563761625DDA /* PETS_app */,
 			);
 		};
 /* End PBXProject section */
@@ -185,13 +217,16 @@
 				66016532623DF7BB2207169C /* ContentView.swift in Sources */,
 				1C38F18266BCD79DC3B849C6 /* CustomSubjectView.swift in Sources */,
 				A62D972B815B1F738FC12DB4 /* EditProfileView.swift in Sources */,
-				A8081BEE761F52F6ED164A11 /* HomeSchooApp.swift in Sources */,
+				A8081BEE761F52F6ED164A11 /* PETS_appApp.swift in Sources */,
 				FBC45A20FEDBDEC94CF69B8F /* ProfileView.swift in Sources */,
 				25854EDBCC0D91981DB31D5F /* ProgressView.swift in Sources */,
 				EB9C11F30629AAFF85CA19A8 /* ResourcesView.swift in Sources */,
 				CF2D95AF4C7B0B811A23FE4D /* SharedModels.swift in Sources */,
 				DD027CC5BBD2E48AEDB268F7 /* SubjectCategoryView.swift in Sources */,
 				C630410D3D947904B534E30B /* SubjectPickerView.swift in Sources */,
+				ABC123DEF456GHI789JKL /* AuthenticationService.swift in Sources */,
+				XYZ987WVU654TSR321QPO /* AppImports.swift in Sources */,
+				PQR123STU456VWX789YZA /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,21 +237,33 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HomeSchoolApp/HomeSchoolApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TTTFBZBMNC;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = HomeSchooApp/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeSchoolApp/Preview Content\"";
+				DEVELOPMENT_TEAM = D4KW6R627K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeSchoolApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.HomeSchooApp;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HomeSchoolApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -283,16 +330,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HomeSchoolApp/HomeSchoolApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TTTFBZBMNC;
+				DEVELOPMENT_TEAM = D4KW6R627K;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = HomeSchooApp/Info.plist;
+				INFOPLIST_FILE = HomeSchoolApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.HomeSchooApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HomeSchoolApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -370,16 +419,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A168FB443CE4DA03C520B9A /* Build configuration list for PBXNativeTarget "HomeSchooApp" */ = {
+		1234567890ABCDEF /* Build configuration list for PBXNativeTarget "PETS_app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				571147113533A7F1568CD7E3 /* Debug */,
 				9341F4DA854F5053E7B49C31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		9C65EEFB33FD0E4D458FD0D4 /* Build configuration list for PBXProject "HomeSchooApp" */ = {
+		9C65EEFB33FD0E4D458FD0D4 /* Build configuration list for PBXProject "HomeSchoolApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE525C927F9448A73AD6A197 /* Debug */,

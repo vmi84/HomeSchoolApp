@@ -1,38 +1,14 @@
 import SwiftUI
 import SwiftData
-
-// Stub Firebase for development
-enum FirebaseApp {
-    static func configure() {
-        print("Firebase configuration stubbed for development")
-    }
-}
+import Foundation
 
 @main
-struct HomeSchooAppApp: App {
+struct PETS_appApp: App {
     @StateObject private var authService = AuthenticationService()
-    
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            UserSubject.self
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-    
-    init() {
-        FirebaseApp.configure()
-    }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(sharedModelContainer)
                 .environmentObject(authService)
         }
     }

@@ -1,8 +1,15 @@
 import SwiftUI
 import SwiftData
+import Foundation
+
+// Import views and services
+#if os(iOS)
+import UIKit
+#endif
 
 struct ContentView: View {
     @EnvironmentObject var authService: AuthenticationService
+    @StateObject private var serviceManager = ServiceManager.shared
     
     var body: some View {
         #if os(iOS) || os(visionOS)
@@ -54,11 +61,14 @@ struct ContentView: View {
                     Label("GrowEasy", systemImage: "chart.bar.fill")
                 }
             }
-            .navigationTitle("HomeSchooApp")
+            .navigationTitle("HomeSchoolApp")
         } detail: {
             ProfileView()
         }
         #endif
+        .onAppear {
+            serviceManager.initializeServices()
+        }
     }
 }
 

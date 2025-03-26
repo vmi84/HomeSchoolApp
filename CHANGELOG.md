@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial project structure
-- Basic SwiftUI views for HomeSchooApp
+- Basic SwiftUI views for HomeSchoolApp
 - User profile management
 - Subject tracking functionality
 - Progress tracking features
