@@ -13,12 +13,25 @@ struct Goal: Identifiable, Codable {
 }
 
 class SettingsViewModel: ObservableObject {
-    @Published var selectedLearningStyle: LearningStyle?
-    @Published var goals: [Goal] = []
+    @Published var selectedLearningStyle: LearningStyle? {
+        didSet {
+            saveSettings()
+        }
+    }
+    @Published var goals: [Goal] = [] {
+        didSet {
+            saveSettings()
+        }
+    }
     @Published var customLearningStyle: String = ""
     @Published var showLearningStylePicker = false
     @Published var showAddGoal = false
     @Published var newGoalText = ""
+    @Published var colorScheme: ColorScheme? {
+        didSet {
+            saveSettings()
+        }
+    }
     
     let learningStyles = [
         LearningStyle(name: "Visual", description: "Learn best through seeing"),
@@ -31,6 +44,10 @@ class SettingsViewModel: ObservableObject {
         LearningStyle(name: "Other", description: "Custom learning style", isCustom: true)
     ]
     
+    init() {
+        loadSettings()
+    }
+    
     func addGoal() {
         guard !newGoalText.isEmpty && goals.count < 10 else { return }
         goals.append(Goal(text: newGoalText))
@@ -40,15 +57,51 @@ class SettingsViewModel: ObservableObject {
     func removeGoal(at index: Int) {
         goals.remove(at: index)
     }
+    
+    private func saveSettings() {
+        if let encoded = try? JSONEncoder().encode(goals) {
+            UserDefaults.standard.set(encoded, forKey: "userGoals")
+        }
+        if let encoded = try? JSONEncoder().encode(selectedLearningStyle) {
+            UserDefaults.standard.set(encoded, forKey: "selectedLearningStyle")
+        }
+        if let colorScheme = colorScheme {
+            UserDefaults.standard.set(colorScheme == .dark ? "dark" : "light", forKey: "colorScheme")
+        }
+    }
+    
+    private func loadSettings() {
+        if let data = UserDefaults.standard.data(forKey: "userGoals"),
+           let decoded = try? JSONDecoder().decode([Goal].self, from: data) {
+            goals = decoded
+        }
+        if let data = UserDefaults.standard.data(forKey: "selectedLearningStyle"),
+           let decoded = try? JSONDecoder().decode(LearningStyle.self, from: data) {
+            selectedLearningStyle = decoded
+        }
+        if let savedScheme = UserDefaults.standard.string(forKey: "colorScheme") {
+            colorScheme = savedScheme == "dark" ? .dark : .light
+        }
+    }
 }
 
 struct SettingsView: View {
     @StateObject private var viewModel = SettingsViewModel()
     @State private var showCustomStyleInput = false
+    @State private var showSaveConfirmation = false
+    @Environment(\.colorScheme) private var systemColorScheme
     
     var body: some View {
         NavigationView {
             Form {
+                Section(header: Text("Appearance")) {
+                    Picker("Theme", selection: $viewModel.colorScheme) {
+                        Text("System").tag(Optional<ColorScheme>.none)
+                        Text("Light").tag(Optional<ColorScheme>.some(.light))
+                        Text("Dark").tag(Optional<ColorScheme>.some(.dark))
+                    }
+                }
+                
                 Section(header: Text("Learning Style")) {
                     Button(action: {
                         viewModel.showLearningStylePicker = true
@@ -89,6 +142,14 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Save") {
+                        viewModel.saveSettings()
+                        showSaveConfirmation = true
+                    }
+                }
+            }
             .sheet(isPresented: $viewModel.showLearningStylePicker) {
                 NavigationView {
                     List(viewModel.learningStyles) { style in
@@ -154,6 +215,12 @@ struct SettingsView: View {
             } message: {
                 Text("Please enter your custom learning style")
             }
+            .alert("Settings Saved", isPresented: $showSaveConfirmation) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text("Your settings have been saved successfully.")
+            }
         }
+        .preferredColorScheme(viewModel.colorScheme ?? systemColorScheme)
     }
 } 

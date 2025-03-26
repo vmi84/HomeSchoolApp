@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.3] - 2024-03-21
+
+### Added
+- Dark/Light mode theme selection in Settings
+- Persistent settings storage using UserDefaults
+- Save button in Settings screen
+- Improved developer bypass functionality
+
+### Changed
+- Enhanced Settings view with appearance section
+- Updated Settings view to automatically save changes
+- Improved Settings view layout and organization
+
+### Fixed
+- Fixed developer bypass navigation issue
+- Fixed settings persistence across app launches
+- Improved error handling in authentication flow
+
 ## [0.3.2] - 2024-03-21
 
 ### Added

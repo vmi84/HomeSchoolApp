@@ -24,7 +24,7 @@ targets:
     settings:
       base:
         INFOPLIST_FILE: Sources/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.PETS_app
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.petsapp
         IPHONEOS_DEPLOYMENT_TARGET: 16.0
         DEVELOPMENT_TEAM: YOUR_TEAM_ID
         CODE_SIGN_STYLE: Automatic
@@ -40,6 +40,31 @@ targets:
         INFOPLIST_KEY_CFBundleURLTypes: 
           - CFBundleURLSchemes: 
             - com.googleusercontent.apps.1-672591439997-ios-4c8d078907da4e46376914
+        SWIFT_EMIT_LOC_STRINGS: true
+        SWIFT_INSTALL_OBJC_HEADER: NO
+        SWIFT_OBJC_INTERFACE_HEADER_NAME: PETS_app-Swift.h
+        SWIFT_MODULE_NAME: PETS_app
+        CLANG_ENABLE_MODULES: YES
+        SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+        GCC_OPTIMIZATION_LEVEL: 0
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+        ENABLE_TESTABILITY: YES
+        ONLY_ACTIVE_ARCH: YES
+        VALIDATE_WORKSPACE: YES
+        CLANG_WARN_DOCUMENTATION_COMMENTS: YES
+        CLANG_WARN_STRICT_PROTOTYPES: YES
+        CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER: YES
+        CLANG_WARN_RANGE_LOOP_ANALYSIS: YES
+        CLANG_WARN_SUSPICIOUS_MOVE: YES
+        CLANG_WARN_UNGUARDED_AVAILABILITY: YES_AGGRESSIVE
+        CLANG_WARN_UNREACHABLE_CODE: YES
+        CLANG_WARN__DUPLICATE_METHOD_MATCH: YES
+        GCC_WARN_64_TO_32_BIT_CONVERSION: YES
+        GCC_WARN_ABOUT_RETURN_TYPE: YES_ERROR
+        GCC_WARN_UNDECLARED_SELECTOR: YES
+        GCC_WARN_UNINITIALIZED_AUTOS: YES_AGGRESSIVE
+        GCC_WARN_UNUSED_FUNCTION: YES
+        GCC_WARN_UNUSED_VARIABLE: YES
     dependencies:
       - package: Firebase
         products:
@@ -69,4 +94,4 @@ targets:
         NSPhotoLibraryUsageDescription: "We need photo library access to let you share photos with your study groups."
         CFBundleURLTypes:
           - CFBundleURLSchemes:
-              - com.googleusercontent.apps.YOUR_GOOGLE_CLIENT_ID 
+              - com.googleusercontent.apps.1-672591439997-ios-4c8d078907da4e46376914 

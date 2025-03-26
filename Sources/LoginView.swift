@@ -87,7 +87,7 @@ struct LoginView: View {
                 
                 // Developer bypass button
                 Button(action: {
-                    authService.isAuthenticated = true
+                    authService.developerBypass()
                 }) {
                     Text("Developer Bypass")
                         .foregroundColor(.gray)
