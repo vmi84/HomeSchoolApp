@@ -24,7 +24,7 @@ struct ContentView: View {
                 ConnectionsView()
             }
             .tabItem {
-                Label("Connections", systemImage: "person.3.fill")
+                Label("Connections", systemImage: "person.2.fill")
             }
             
             NavigationStack {
@@ -33,8 +33,28 @@ struct ContentView: View {
             .tabItem {
                 Label("Progress", systemImage: "chart.bar.fill")
             }
+            
+            NavigationStack {
+                SettingsView()
+            }
+            .tabItem {
+                Label("Settings", systemImage: "gear")
+            }
         }
         .accentColor(.blue)
+    }
+}
+
+struct LearningCompassView: View {
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                // Your existing Learning Compass content here
+                Text("Learning Compass Content")
+                    .font(.title)
+            }
+            .padding()
+        }
     }
 }
 

@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.2] - 2024-03-21
+
+### Added
+- New Settings screen with learning style selection
+- Support for up to 10 customizable goals
+- Scrollable Learning Compass view
+- Custom learning style input option
+- Version tracking in Settings
+
+### Changed
+- Updated tab bar icons for better visual consistency
+- Improved navigation structure with Settings tab
+- Enhanced Learning Compass layout with scrolling support
+
+### Fixed
+- Fixed navigation stack implementation
+- Improved form validation for goal input
+
 ## [0.3.1] - 2024-03-21
 
 ### Added

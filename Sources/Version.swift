@@ -1,5 +1,5 @@
 enum Version {
-    static let current = "0.3.1"
+    static let current = "0.3.2"
     static let build = "1"
     
     static var full: String {
