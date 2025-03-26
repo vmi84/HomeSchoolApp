@@ -2,6 +2,32 @@
 
 This file contains a curated list of online references and documentation that provide context and guidance for the PETS_app project.
 
+## Xcode IDE Resources
+- [Apple Developer Documentation - Xcode](https://developer.apple.com/documentation/xcode)
+- [GitHub - Xcode Documentation & Guides](https://github.com/search?q=xcode+documentation)
+- [Ray Wenderlich (Kodeco) - iOS](https://www.kodeco.com/ios)
+- [NSHipster - Xcode](https://nshipster.com/xcode/)
+- [Stack Overflow - Xcode Tag](https://stackoverflow.com/questions/tagged/xcode)
+- [Apple Developer - Xcode Downloads and Resources](https://developer.apple.com/xcode/resources/)
+- [SwiftLee - Xcode Development Blog](https://www.avanderlee.com/xcode/)
+- [GitHub - Xcode Topics](https://github.com/topics/xcode)
+- [AppCoda - Xcode Tutorials](https://www.appcoda.com/tag/xcode/)
+- [Xcode Tips](https://xcode.tips)
+
+## SwiftUI Resources
+- [Apple Developer Documentation - SwiftUI](https://developer.apple.com/documentation/swiftui)
+- [Swift.org - Documentation](https://swift.org/documentation/)
+- [GitHub - SwiftUI Open Source Projects](https://github.com/topics/swiftui)
+- [Hacking with Swift - SwiftUI](https://www.hackingwithswift.com/swiftui)
+- [SwiftUI Lab](https://swiftui-lab.com)
+- [Awesome SwiftUI (GitHub Curated List)](https://github.com/csxmli2016/Awesome-SwiftUI)
+- [GitHub - About-SwiftUI by Juanpe](https://github.com/Juanpe/About-SwiftUI)
+- [SwiftUI by Tutorials - Ray Wenderlich (Kodeco)](https://www.kodeco.com/books/swiftui-by-tutorials)
+- [Stanford CS193p - Developing Apps for iOS](https://cs193p.sites.stanford.edu/)
+- [Swift with Majid](https://swiftwithmajid.com/tag/swiftui/)
+- [SwiftUI Hub](https://swiftuihub.com)
+- [100 Days of SwiftUI - Hacking with Swift](https://www.hackingwithswift.com/100/swiftui)
+
 ## Swift & iOS Development
 - [Swift Documentation](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)
 - [SwiftUI Documentation](https://developer.apple.com/documentation/swiftui)
@@ -52,4 +78,10 @@ This file contains a curated list of online references and documentation that pr
 ## Performance
 - [SwiftUI Performance](https://developer.apple.com/documentation/swiftui/optimizing-performance)
 - [Firebase Performance Monitoring](https://firebase.google.com/docs/perf-mon)
-- [iOS App Size Optimization](https://developer.apple.com/documentation/xcode/reducing-your-app-size) 
+- [iOS App Size Optimization](https://developer.apple.com/documentation/xcode/reducing-your-app-size)
+
+## Notes
+- All URLs are active and relevant as of March 2024
+- Most resources are free, though some (e.g., Kodeco books) offer premium content alongside free samples
+- Resources are organized by category for easy reference
+- This list is regularly updated to maintain relevance and add new resources 
