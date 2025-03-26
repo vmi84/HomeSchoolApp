@@ -1,0 +1,70 @@
+{
+    "name": "PETS_app",
+    "version": "1.0.0",
+    "resources": {
+        "references": {
+            "path": "~/.cursor/resources/REFERENCES.md",
+            "type": "markdown",
+            "description": "Comprehensive development resources and documentation"
+        },
+        "project_templates": {
+            "path": "~/.cursor/resources/templates",
+            "type": "directory",
+            "description": "Project templates and initialization scripts"
+        },
+        "snippets": {
+            "path": "~/Library/Developer/Xcode/UserData/CodeSnippets",
+            "type": "directory",
+            "description": "Code snippets for Swift and iOS development"
+        },
+        "agent_commands": {
+            "path": "~/.cursor/resources/agent_commands.md",
+            "type": "markdown",
+            "description": "Available CursorAI agent commands"
+        }
+    },
+    "commands": {
+        "init_project": {
+            "script": "~/.cursor/resources/init_project.sh",
+            "description": "Initialize a new project with development resources",
+            "usage": "init_project.sh <project_directory>"
+        },
+        "update_resources": {
+            "script": "~/.cursor/resources/setup_resources.sh",
+            "description": "Update global development resources",
+            "usage": "setup_resources.sh"
+        }
+    },
+    "agent_commands": {
+        "@Web": {
+            "description": "Access web-based development resources",
+            "command": "open ~/.cursor/resources/REFERENCES.md"
+        },
+        "@Resources": {
+            "description": "List all available development resources",
+            "command": "ls -la ~/.cursor/resources/"
+        },
+        "@Init": {
+            "description": "Initialize a new project with development resources",
+            "command": "~/.cursor/resources/init_project.sh",
+            "usage": "@Init <project_directory>"
+        },
+        "@Update": {
+            "description": "Update global development resources",
+            "command": "~/.cursor/resources/setup_resources.sh"
+        },
+        "@Config": {
+            "description": "Show current CursorAI configuration",
+            "command": "cat ~/.cursor/config/cursor_config.json"
+        },
+        "@Help": {
+            "description": "Show available agent commands and their usage",
+            "command": "cat ~/.cursor/resources/agent_commands.md"
+        }
+    },
+    "settings": {
+        "auto_init": true,
+        "resource_path": "~/.cursor/resources",
+        "xcode_path": "~/Library/Developer/Xcode/UserData"
+    }
+} 
