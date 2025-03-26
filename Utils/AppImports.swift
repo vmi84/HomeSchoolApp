@@ -5,9 +5,9 @@ import CoreLocation
 import MapKit
 
 // Make imports available throughout the app
-@_exported import struct HomeSchoolApp.AuthenticationService
-@_exported import struct HomeSchoolApp.ServiceManager
-@_exported import struct HomeSchoolApp.Connection
+@_exported import struct PETS_app.AuthenticationService
+@_exported import struct PETS_app.ServiceManager
+@_exported import struct PETS_app.Connection
 
 // Stub Firebase Core
 #if DEBUG

@@ -26,7 +26,7 @@ let package = Package(
                 .product(name: "FirebaseDatabase", package: "firebase-ios-sdk"),
             ],
             path: ".",
-            exclude: ["Tests", ".build", ".git"]
+            exclude: [".build", ".git"]
         ),
     ]
 ) 
