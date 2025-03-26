@@ -3,19 +3,25 @@ options:
   bundleIdPrefix: com.example
   deploymentTarget:
     iOS: 15.0
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk.git
+    from: "10.0.0"
 targets:
   PETS_app:
     type: application
     platform: iOS
     sources:
-      - path: .
+      - path: Sources
         excludes:
           - "*.md"
           - "*.yml"
+    resources:
+      - path: Sources/GoogleService-Info.plist
     settings:
       base:
-        INFOPLIST_FILE: Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.PETS_app
+        INFOPLIST_FILE: Sources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.petsapp
         DEVELOPMENT_TEAM: ""
         CODE_SIGN_STYLE: Manual
         CODE_SIGN_IDENTITY: ""
@@ -23,8 +29,23 @@ targets:
         ENABLE_BITCODE: NO
         IPHONEOS_DEPLOYMENT_TARGET: 15.0
         TARGETED_DEVICE_FAMILY: 1,2
+        SWIFT_EMIT_LOC_STRINGS: YES
+        SWIFT_INSTALL_OBJC_HEADER: NO
+        SWIFT_OBJC_INTERFACE_HEADER_NAME: PETS_app-Swift.h
+        SWIFT_MODULE_NAME: PETS_app
+    dependencies:
+      - package: Firebase
+        product: FirebaseAnalytics
+      - package: Firebase
+        product: FirebaseDatabase
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseStorage
     info:
-      path: Info.plist
+      path: Sources/Info.plist
       properties:
         LSRequiresIPhoneOS: true
         UILaunchStoryboardName: LaunchScreen
@@ -34,4 +55,8 @@ targets:
           - UIInterfaceOrientationPortrait
           - UIInterfaceOrientationPortraitUpsideDown
           - UIInterfaceOrientationLandscapeLeft
-          - UIInterfaceOrientationLandscapeRight 
+          - UIInterfaceOrientationLandscapeRight
+        NSLocationWhenInUseUsageDescription: "We need your location to find nearby study groups and learning resources."
+        NSLocationAlwaysAndWhenInUseUsageDescription: "We need your location to find nearby study groups and learning resources."
+        NSCameraUsageDescription: "We need camera access to let you share photos with your study groups."
+        NSPhotoLibraryUsageDescription: "We need photo library access to let you share photos with your study groups." 
