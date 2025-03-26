@@ -2,9 +2,9 @@ import SwiftUI
 import SwiftData
 import Foundation
 
-struct HomeSchoolApp {
+struct PETS_app {
     static func main() {
-        let app = HomeSchoolAppApp()
+        let app = PETS_appApp()
         app.run()
     }
 } 

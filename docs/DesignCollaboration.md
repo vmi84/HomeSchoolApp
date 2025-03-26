@@ -1,18 +1,18 @@
-# Design Collaboration Guide for HomeSchoolApp
+# Design Collaboration Guide for PETS_app
 
 ## Overview
-This document outlines our approach to collaborating with designers on wireframes for the HomeSchoolApp project using Figma.
+This document outlines our approach to collaborating with designers on wireframes for the PETS_app project using Figma.
 
 ## Getting Started
 
 1. Access the Figma project:
-   - Create a new project called "HomeSchoolApp"
+   - Create a new project called "PETS_app"
    - Share the project with the design team
    - Set up appropriate permissions for collaboration
 
 ## Using Figma for Wireframe Collaboration
 
-This document outlines our approach to collaborating with designers on wireframes for the HomeSchoolApp project using Figma.
+This document outlines our approach to collaborating with designers on wireframes for the PETS_app project using Figma.
 
 ### Setting Up Figma
 
@@ -21,7 +21,7 @@ This document outlines our approach to collaborating with designers on wireframe
    - The free tier allows for up to 3 active projects and collaboration with 2 editors
 
 2. **Create a Project Structure**
-   - Create a new project called "HomeSchoolApp"
+   - Create a new project called "PETS_app"
    - Set up frames for mobile (iPhone) and tablet layouts
 
 3. **Invite Team Members**

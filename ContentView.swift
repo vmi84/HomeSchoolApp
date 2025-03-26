@@ -61,7 +61,7 @@ struct ContentView: View {
                     Label("GrowEasy", systemImage: "chart.bar.fill")
                 }
             }
-            .navigationTitle("HomeSchoolApp")
+            .navigationTitle("PETS_app")
         } detail: {
             ProfileView()
         }

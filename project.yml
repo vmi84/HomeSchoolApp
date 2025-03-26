@@ -1,4 +1,4 @@
-name: HomeSchoolApp
+name: PETS_app
 options:
   bundleIdPrefix: com.example
   deploymentTarget:
@@ -11,17 +11,17 @@ packages:
     url: https://github.com/firebase/firebase-ios-sdk.git
     from: "10.0.0"
 targets:
-  HomeSchoolApp:
+  PETS_app:
     type: application
     platform: iOS
     sources:
-      - path: HomeSchoolApp
+      - path: PETS_app
     resources:
-      - path: HomeSchoolApp/GoogleService-Info.plist
+      - path: PETS_app/GoogleService-Info.plist
     settings:
       base:
-        INFOPLIST_FILE: HomeSchoolApp/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.HomeSchoolApp
+        INFOPLIST_FILE: PETS_app/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.PETS_app
         DEVELOPMENT_TEAM: TTTFBZBMNC
         CODE_SIGN_STYLE: Automatic
         CODE_SIGN_IDENTITY: Apple Development
@@ -41,7 +41,7 @@ targets:
       - package: Firebase
         product: FirebaseStorage
     info:
-      path: HomeSchoolApp/Info.plist
+      path: PETS_app/Info.plist
       properties:
         LSRequiresIPhoneOS: true
         UILaunchStoryboardName: LaunchScreen

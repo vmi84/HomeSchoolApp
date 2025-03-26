@@ -1,8 +1,8 @@
-# HomeSchoolApp Structure Documentation
+# PETS_app Structure Documentation
 
 ## Core Screens
 
-HomeSchoolApp is organized into four main tabs, each serving a specific purpose in the homeschooling management experience:
+PETS_app is organized into four main tabs, each serving a specific purpose in the homeschooling management experience:
 
 ### 1. Learning Compass (Profile)
 

@@ -169,7 +169,7 @@ class AuthenticationService: ObservableObject {
 // MARK: - Main App
 
 @main
-struct HomeSchoolApp: App {
+struct PETS_app: App {
     @StateObject private var authService = AuthenticationService()
     
     var sharedModelContainer: ModelContainer = {

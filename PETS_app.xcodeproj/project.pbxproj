@@ -110,18 +110,18 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		F2A724525A19CD0C7C9A63AD /* HomeSchoolApp */ = {
+		F2A724525A19CD0C7C9A63AD /* PETS_app */ = {
 			isa = PBXGroup;
 			children = (
 				709806EAD2FB1AE590B7A211 /* ContentView.swift */,
 				72857D4947E7F47EAE122814 /* GoogleService-Info.plist */,
-				538470BB4DBB786388CEC0D6 /* HomeSchoolApp.swift */,
+				538470BB4DBB786388CEC0D6 /* PETS_appApp.swift */,
 				3822C991ED3AA350CEF66F75 /* Info.plist */,
 				455E3DD4098B5C1EAE7DB9B6 /* SharedModels.swift */,
 				35E26D47C6B168B2F639BC92 /* Views */,
 				A1B2C3D4E5F6G7H8I9J0K1L /* Utils */,
 			);
-			path = HomeSchoolApp;
+			path = PETS_app;
 			sourceTree = "<group>";
 		};
 		A1B2C3D4E5F6G7H8I9J0K1L /* Utils */ = {
@@ -149,7 +149,7 @@
 			);
 			dependencies = (
 			);
-			name = "PETS_app";
+			name = PETS_app;
 			packageProductDependencies = (
 				6CE8ACFC39F8E6C5CEE5926D /* FirebaseAnalytics */,
 				613D7F19F85118C7257A0768 /* FirebaseAuth */,
@@ -157,7 +157,7 @@
 				4D6AF6EEAFB1897DD797D048 /* FirebaseDatabase */,
 				99B8EC98C4C2589CAA2843C6 /* FirebaseStorage */,
 			);
-			productName = "PETS_app";
+			productName = PETS_app;
 			productReference = 80E6F5EBC2A3563761625DDA /* PETS_app.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -361,12 +361,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PETS_app.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PETS_app/PETS_app.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PETS_app/Preview Content\"";
+				DEVELOPMENT_TEAM = D4KW6R627K;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PETS_app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,12 +389,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PETS_app.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PETS_app/PETS_app.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PETS_app/Preview Content\"";
+				DEVELOPMENT_TEAM = D4KW6R627K;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PETS_app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
