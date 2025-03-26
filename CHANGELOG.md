@@ -16,7 +16,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Future bug fixes will be listed here
 
-## [0.1.0] - 2024-07-21
+## [0.1.3] - 2024-03-26
+
+### Changed
+- Renamed project from HomeSchoolApp to PETS_app
+- Restructured project layout for better organization
+- Updated project configuration files
+- Moved source files to root directory
+- Updated package structure and dependencies
+
+## [0.1.2] - 2024-03-25
+
+### Added
+- Implemented core screens:
+  - Learning Compass
+  - Resource Nexus
+  - HomeLink
+  - GrowEasy Analytics
+- Added Firebase integration
+- Added user authentication system
+- Added subject tracking system
+- Added progress monitoring features
+
+### Changed
+- Updated UI/UX design
+- Improved navigation flow
+- Enhanced data management
+
+### Fixed
+- Various bug fixes and performance improvements
+
+## [0.1.1] - 2024-03-24
+
+### Added
+- Basic project structure
+- Initial SwiftUI views
+- Core functionality implementation
+
+### Changed
+- Updated project configuration
+- Improved code organization
+
+## [0.1.0] - 2024-03-21
 
 ### Added
 - Initial project structure
