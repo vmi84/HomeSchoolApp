@@ -2,6 +2,73 @@
 
 All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.4.1] - 2024-03-21
+
+### Added
+- Student profile section with name and grade level
+- Subject management in settings
+- Ability to add, remove, and reorder subjects
+- Persistent background color support
+
+### Changed
+- Converted active subjects from horizontal scroll to column list
+- Improved learning style display with icon
+- Enhanced subject card design with better layout
+- Updated project configuration to preserve team settings
+
+### Removed
+- Redundant quick actions section
+- Horizontal scrolling for subjects
+
+### Fixed
+- Team retention in project.yml
+- Background color persistence
+- Subject management interface
+
+## [0.4.0] - 2024-03-20
+
+### Added
+- Welcome screen with login options
+- Developer Bypass functionality
+- Basic authentication service
+- Main app navigation structure
+
+### Changed
+- Updated deployment target to iOS 16.0
+- Improved project structure
+- Enhanced UI consistency
+
+### Fixed
+- UIKit-related issues
+- Color system compatibility
+- Navigation structure
+
+## [0.3.0] - 2024-03-19
+
+### Added
+- Basic app structure
+- Initial views setup
+- Project configuration
+
+### Changed
+- Updated project settings
+- Improved file organization
+
+## [0.2.0] - 2024-03-18
+
+### Added
+- Initial project setup
+- Basic configuration files
+
+## [0.1.0] - 2024-03-17
+
+### Added
+- Initial commit
+- Project initialization
+
 ## [0.3.3] - 2024-03-21
 
 ### Added
