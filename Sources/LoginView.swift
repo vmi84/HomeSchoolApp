@@ -1,12 +1,10 @@
 import SwiftUI
-import FirebaseAuth
-import GoogleSignIn
-import GoogleSignInSwift
 
 struct LoginView: View {
-    @StateObject private var authService = AuthenticationService()
+    @EnvironmentObject var authService: AuthenticationService
     @State private var email = ""
     @State private var password = ""
+    @State private var name = ""
     @State private var isSignUp = false
     @State private var showError = false
     @State private var errorMessage = ""
@@ -14,13 +12,32 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("Parents Education Tracking System")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 50)
+                // Welcome Header
+                VStack(spacing: 10) {
+                    Text("Welcome to")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                    
+                    Text("PETS")
+                        .font(.system(size: 40, weight: .bold))
+                        .foregroundColor(.blue)
+                    
+                    Text("Parents Education Tracking System")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                }
+                .padding(.top, 50)
                 
+                // Login Form
                 VStack(spacing: 15) {
+                    if isSignUp {
+                        TextField("Name", text: $name)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .textContentType(.name)
+                            .autocapitalization(.words)
+                    }
+                    
                     TextField("Email", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .textContentType(.emailAddress)
@@ -33,11 +50,12 @@ struct LoginView: View {
                 }
                 .padding(.horizontal)
                 
+                // Sign In/Up Button
                 Button(action: {
                     Task {
                         do {
                             if isSignUp {
-                                try await authService.signUp(email: email, password: password)
+                                try await authService.signUp(email: email, password: password, name: name)
                             } else {
                                 try await authService.signIn(email: email, password: password)
                             }
@@ -56,6 +74,7 @@ struct LoginView: View {
                 }
                 .padding(.horizontal)
                 
+                // Google Sign In
                 Button(action: {
                     Task {
                         do {
@@ -78,6 +97,7 @@ struct LoginView: View {
                 }
                 .padding(.horizontal)
                 
+                // Toggle Sign In/Up
                 Button(action: {
                     isSignUp.toggle()
                 }) {
@@ -85,15 +105,27 @@ struct LoginView: View {
                         .foregroundColor(.blue)
                 }
                 
-                // Developer bypass button
-                Button(action: {
-                    authService.developerBypass()
-                }) {
-                    Text("Developer Bypass")
-                        .foregroundColor(.gray)
+                // Developer Bypass
+                VStack(spacing: 10) {
+                    Divider()
+                        .padding(.vertical, 10)
+                    
+                    Text("Development Options")
                         .font(.caption)
+                        .foregroundColor(.gray)
+                    
+                    Button(action: {
+                        authService.developerBypass()
+                    }) {
+                        Text("Developer Bypass")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.gray)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal)
                 }
-                .padding(.top, 20)
                 
                 Spacer()
             }

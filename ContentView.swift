@@ -8,66 +8,17 @@ import UIKit
 #endif
 
 struct ContentView: View {
-    @EnvironmentObject var authService: AuthenticationService
-    @StateObject private var serviceManager = ServiceManager.shared
+    @StateObject private var authService = AuthenticationService()
     
     var body: some View {
-        #if os(iOS) || os(visionOS)
-        TabView {
-            ProfileView()
-                .tabItem {
-                    Label("Learning Compass", systemImage: "person.fill")
-                }
-            
-            ResourcesView()
-                .tabItem {
-                    Label("Resource Nexus", systemImage: "books.vertical.fill")
-                }
-            
-            ConnectionsView()
-                .tabItem {
-                    Label("HomeLink", systemImage: "person.3.fill")
-                }
-            
-            ProgressAnalyticsView()
-                .tabItem {
-                    Label("GrowEasy", systemImage: "chart.bar.fill")
-                }
-        }
-        #else
-        NavigationSplitView {
-            List {
-                NavigationLink {
-                    ProfileView()
-                } label: {
-                    Label("Learning Compass", systemImage: "person.fill")
-                }
-                
-                NavigationLink {
-                    ResourcesView()
-                } label: {
-                    Label("Resource Nexus", systemImage: "books.vertical.fill")
-                }
-                
-                NavigationLink {
-                    ConnectionsView()
-                } label: {
-                    Label("HomeLink", systemImage: "person.3.fill")
-                }
-                
-                NavigationLink {
-                    ProgressAnalyticsView()
-                } label: {
-                    Label("GrowEasy", systemImage: "chart.bar.fill")
-                }
+        Group {
+            if authService.isAuthenticated {
+                HomeView()
+                    .environmentObject(authService)
+            } else {
+                LoginView()
+                    .environmentObject(authService)
             }
-            .navigationTitle("PETS_app")
-        } detail: {
-            ProfileView()
-        }
-        #endif
-        .onAppear {
-            serviceManager.initializeServices()
         }
     }
 }

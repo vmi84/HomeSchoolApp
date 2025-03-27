@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05642CA9E35044A0ECE982A5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8323D18FE673AD11809A64 /* AuthenticationService.swift */; };
 		142BFB9743261E7DD0EE5F09 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F812998A41B7A788AF226 /* HomeView.swift */; };
 		22D45419EA290A970ADCD53D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A3941BB77222108AF5347 /* ProgressView.swift */; };
 		2D3D9DE3C145CD9D13636F1D /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770169DF1AAD9E35AA7402BA /* ConnectionsView.swift */; };
@@ -24,7 +25,6 @@
 		E84CF776C9FD3D32F24BB57F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6E2ADEB1DFFE57F783A3A43F /* FirebaseAuth */; };
 		EDF0BDEB7BA2CAC0E280C356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 973093C1AA2021F311A071C5 /* GoogleService-Info.plist */; };
 		F7E4D715F72BB4C7103F0426 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325606C5F92FE507F8B87654 /* SettingsView.swift */; };
-		F9D418C6A2ECE1FD5F441C39 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBB42366AD3C76D7552B6 /* AuthenticationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		312A3941BB77222108AF5347 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		325606C5F92FE507F8B87654 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		39AB5DD4D80EFB7CE1091B62 /* PETS_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PETS_appApp.swift; sourceTree = "<group>"; };
-		5B7FBB42366AD3C76D7552B6 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		770169DF1AAD9E35AA7402BA /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
 		86FCCF867A8881096B3B7EC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CDF4798A8C596C49D061E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8F8323D18FE673AD11809A64 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		973093C1AA2021F311A071C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A12CFA0AE37BA4672D10B7DF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AFC814FF63653617B874E1F8 /* PETS_app.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PETS_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +64,6 @@
 		0B210E82B4B48EDE9463C127 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5B7FBB42366AD3C76D7552B6 /* AuthenticationService.swift */,
 				770169DF1AAD9E35AA7402BA /* ConnectionsView.swift */,
 				86FCCF867A8881096B3B7EC2 /* ContentView.swift */,
 				973093C1AA2021F311A071C5 /* GoogleService-Info.plist */,
@@ -76,6 +75,7 @@
 				312A3941BB77222108AF5347 /* ProgressView.swift */,
 				2877A7FBD39EECC37E5C8ED8 /* ResourcesView.swift */,
 				E6C2B38CC1E19411F5602E6B /* Version.swift */,
+				85E5E1526249D27843D5264A /* Utils */,
 				98E7E990CA4468C7A5A670AD /* Views */,
 			);
 			path = Sources;
@@ -87,6 +87,14 @@
 				AFC814FF63653617B874E1F8 /* PETS_app.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		85E5E1526249D27843D5264A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F8323D18FE673AD11809A64 /* AuthenticationService.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		98E7E990CA4468C7A5A670AD /* Views */ = {
@@ -143,7 +151,6 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					726268CEC594EC27EE736375 = {
-						DevelopmentTeam = YOUR_TEAM_ID;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -185,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D418C6A2ECE1FD5F441C39 /* AuthenticationService.swift in Sources */,
+				05642CA9E35044A0ECE982A5 /* AuthenticationService.swift in Sources */,
 				2D3D9DE3C145CD9D13636F1D /* ConnectionsView.swift in Sources */,
 				B2012F97FD4E7751B529FC94 /* ContentView.swift in Sources */,
 				142BFB9743261E7DD0EE5F09 /* HomeView.swift in Sources */,
@@ -208,26 +215,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Sources/Info.plist;
 				INFOPLIST_KEY_CFBundleURLTypes = (
 					{
@@ -246,14 +237,12 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.petsapp;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffwhite.petapp;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_MODULE_NAME = PETS_app;
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "PETS_app-Swift.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_WORKSPACE = YES;
@@ -266,26 +255,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Sources/Info.plist;
 				INFOPLIST_KEY_CFBundleURLTypes = (
 					{
@@ -304,14 +277,12 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.petsapp;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffwhite.petapp;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_MODULE_NAME = PETS_app;
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "PETS_app-Swift.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_WORKSPACE = YES;

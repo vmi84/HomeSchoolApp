@@ -1,15 +1,27 @@
 import SwiftUI
 
 struct LearningStyle: Identifiable, Codable {
-    let id = UUID()
+    var id: UUID
     let name: String
     let description: String
-    var isCustom: Bool = false
+    var isCustom: Bool
+    
+    init(id: UUID = UUID(), name: String, description: String, isCustom: Bool = false) {
+        self.id = id
+        self.name = name
+        self.description = description
+        self.isCustom = isCustom
+    }
 }
 
 struct Goal: Identifiable, Codable {
-    let id = UUID()
+    var id: UUID
     var text: String
+    
+    init(id: UUID = UUID(), text: String) {
+        self.id = id
+        self.text = text
+    }
 }
 
 class SettingsViewModel: ObservableObject {
@@ -58,7 +70,7 @@ class SettingsViewModel: ObservableObject {
         goals.remove(at: index)
     }
     
-    private func saveSettings() {
+    func saveSettings() {
         if let encoded = try? JSONEncoder().encode(goals) {
             UserDefaults.standard.set(encoded, forKey: "userGoals")
         }

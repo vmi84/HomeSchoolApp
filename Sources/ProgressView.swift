@@ -1,5 +1,10 @@
 import SwiftUI
-import UIKit
+
+struct ProgressView: View {
+    var body: some View {
+        Text("Progress View")
+    }
+}
 
 struct LearningProgressView: View {
     var body: some View {
@@ -76,7 +81,7 @@ struct LearningProgressView: View {
                         )
                     }
                     .padding()
-                    .background(Color(uiColor: .systemBackground))
+                    .background(Color.secondary.opacity(0.1))
                     .cornerRadius(15)
                     .shadow(radius: 2)
                     .padding(.horizontal)
@@ -149,7 +154,7 @@ struct LearningProgressView: View {
                         )
                     }
                     .padding()
-                    .background(Color(uiColor: .systemBackground))
+                    .background(Color.secondary.opacity(0.1))
                     .cornerRadius(15)
                     .shadow(radius: 2)
                     .padding(.horizontal)
@@ -157,7 +162,7 @@ struct LearningProgressView: View {
             }
             .padding(.vertical)
         }
-        .background(Color(uiColor: .systemGroupedBackground))
+        .background(Color(uiColor: .systemBackground))
         .navigationTitle("GrowEasy Analytics")
     }
 }
@@ -189,7 +194,7 @@ struct ProgressCard: View {
         }
         .frame(maxWidth: .infinity)
         .padding()
-        .background(Color(uiColor: .systemBackground))
+        .background(Color.secondary.opacity(0.1))
         .cornerRadius(15)
         .shadow(radius: 2)
     }
@@ -224,7 +229,7 @@ struct AnalyticsRow: View {
             .foregroundColor(trendUp ? .green : .red)
         }
         .padding()
-        .background(Color(uiColor: .systemGray6))
+        .background(Color.secondary.opacity(0.1))
         .cornerRadius(10)
     }
 }
@@ -250,7 +255,7 @@ struct AchievementCard: View {
         }
         .frame(width: 150)
         .padding()
-        .background(Color(uiColor: .systemBackground))
+        .background(Color.secondary.opacity(0.1))
         .cornerRadius(15)
         .shadow(radius: 2)
     }
@@ -283,7 +288,7 @@ struct HistoryRow: View {
                 .foregroundColor(.gray)
         }
         .padding()
-        .background(Color(uiColor: .systemGray6))
+        .background(Color.secondary.opacity(0.1))
         .cornerRadius(10)
     }
 }

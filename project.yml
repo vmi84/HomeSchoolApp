@@ -1,32 +1,26 @@
 name: PETS_app
 options:
-  bundleIdPrefix: com.example
+  bundleIdPrefix: com.jeffwhite
   deploymentTarget:
     iOS: 16.0
 packages:
   Firebase:
     url: https://github.com/firebase/firebase-ios-sdk
-    from: "10.0.0"
+    from: 10.0.0
   GoogleSignIn:
     url: https://github.com/google/GoogleSignIn-iOS
-    from: "7.0.0"
+    from: 7.0.0
 targets:
   PETS_app:
     type: application
     platform: iOS
+    deploymentTarget: "16.0"
     sources:
       - path: Sources
-        excludes:
-          - "*.md"
-          - "*.yml"
-    resources:
-      - path: Sources/GoogleService-Info.plist
     settings:
       base:
         INFOPLIST_FILE: Sources/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.petsapp
-        IPHONEOS_DEPLOYMENT_TARGET: 16.0
-        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+        PRODUCT_BUNDLE_IDENTIFIER: com.jeffwhite.petapp
         CODE_SIGN_STYLE: Automatic
         ENABLE_BITCODE: false
         SWIFT_VERSION: 5.0
@@ -40,58 +34,33 @@ targets:
         INFOPLIST_KEY_CFBundleURLTypes: 
           - CFBundleURLSchemes: 
             - com.googleusercontent.apps.1-672591439997-ios-4c8d078907da4e46376914
-        SWIFT_EMIT_LOC_STRINGS: true
+        OTHER_LDFLAGS: $(inherited) -ObjC
         SWIFT_INSTALL_OBJC_HEADER: NO
-        SWIFT_OBJC_INTERFACE_HEADER_NAME: PETS_app-Swift.h
-        SWIFT_MODULE_NAME: PETS_app
         CLANG_ENABLE_MODULES: YES
-        SWIFT_OPTIMIZATION_LEVEL: "-Onone"
-        GCC_OPTIMIZATION_LEVEL: 0
+        SWIFT_EMIT_LOC_STRINGS: YES
         SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
         ENABLE_TESTABILITY: YES
         ONLY_ACTIVE_ARCH: YES
         VALIDATE_WORKSPACE: YES
-        CLANG_WARN_DOCUMENTATION_COMMENTS: YES
-        CLANG_WARN_STRICT_PROTOTYPES: YES
-        CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER: YES
-        CLANG_WARN_RANGE_LOOP_ANALYSIS: YES
-        CLANG_WARN_SUSPICIOUS_MOVE: YES
-        CLANG_WARN_UNGUARDED_AVAILABILITY: YES_AGGRESSIVE
-        CLANG_WARN_UNREACHABLE_CODE: YES
-        CLANG_WARN__DUPLICATE_METHOD_MATCH: YES
-        GCC_WARN_64_TO_32_BIT_CONVERSION: YES
-        GCC_WARN_ABOUT_RETURN_TYPE: YES_ERROR
-        GCC_WARN_UNDECLARED_SELECTOR: YES
-        GCC_WARN_UNINITIALIZED_AUTOS: YES_AGGRESSIVE
-        GCC_WARN_UNUSED_FUNCTION: YES
-        GCC_WARN_UNUSED_VARIABLE: YES
     dependencies:
       - package: Firebase
-        products:
-          - FirebaseAuth
-          - FirebaseFirestore
-          - FirebaseStorage
-          - FirebaseAnalytics
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseStorage
+      - package: Firebase
+        product: FirebaseAnalytics
       - package: GoogleSignIn
-        products:
-          - GoogleSignIn
-          - GoogleSignInSwift
+        product: GoogleSignIn
+      - package: GoogleSignIn
+        product: GoogleSignInSwift
     info:
       path: Sources/Info.plist
       properties:
         LSRequiresIPhoneOS: true
         UILaunchStoryboardName: LaunchScreen
-        UISupportedInterfaceOrientations:
-          - UIInterfaceOrientationPortrait
-        UISupportedInterfaceOrientations~ipad:
-          - UIInterfaceOrientationPortrait
-          - UIInterfaceOrientationPortraitUpsideDown
-          - UIInterfaceOrientationLandscapeLeft
-          - UIInterfaceOrientationLandscapeRight
         NSLocationWhenInUseUsageDescription: "We need your location to find nearby study groups and learning resources."
         NSLocationAlwaysAndWhenInUseUsageDescription: "We need your location to find nearby study groups and learning resources."
         NSCameraUsageDescription: "We need camera access to let you share photos with your study groups."
-        NSPhotoLibraryUsageDescription: "We need photo library access to let you share photos with your study groups."
-        CFBundleURLTypes:
-          - CFBundleURLSchemes:
-              - com.googleusercontent.apps.1-672591439997-ios-4c8d078907da4e46376914 
+        NSPhotoLibraryUsageDescription: "We need photo library access to let you share photos with your study groups." 
