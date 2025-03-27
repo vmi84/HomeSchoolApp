@@ -3,6 +3,8 @@ options:
   bundleIdPrefix: com.jeffwhite
   deploymentTarget:
     iOS: 16.0
+  xcodeVersion: "15.0"
+  preserveUserSettings: true
 packages:
   Firebase:
     url: https://github.com/firebase/firebase-ios-sdk
