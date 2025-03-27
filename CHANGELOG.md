@@ -77,78 +77,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Redundant UI elements
 - Unnecessary navigation components
 
-## [0.3.0] - 2024-03-18
-
-### Added
-- Learning style selection
-- Subject management
-- Progress tracking
-- Interactive UI elements
-
-### Changed
-- Updated navigation structure
-- Enhanced UI components
-- Improved user experience
-- Refined visual design
-
-### Fixed
-- Navigation issues
-- UI inconsistencies
-- Performance optimizations
-- Bug fixes
-
-### Removed
-- Redundant components
-- Unnecessary features
-
-## [0.2.0] - 2024-03-17
-
-### Added
-- Basic navigation structure
-- Core UI components
-- User authentication
-- Settings management
-
-### Changed
-- Updated project structure
-- Enhanced UI design
-- Improved code organization
-- Refined user experience
-
-### Fixed
-- Initial setup issues
-- Basic functionality
-- UI consistency
-- Navigation flow
-
-### Removed
-- Legacy components
-- Unused features
-
-## [0.1.0] - 2024-03-16
-
-### Added
-- Initial project setup
-- Basic UI components
-- Project configuration
-- Development environment setup
-
-### Changed
-- Project structure
-- Development workflow
-- Code organization
-- Build configuration
-
-### Fixed
-- Initial setup
-- Basic functionality
-- Development environment
-- Project configuration
-
-### Removed
-- Legacy code
-- Unused components
-
 ## [0.3.3] - 2024-03-21
 
 ### Added
@@ -205,22 +133,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.0] - 2024-03-21
 
 ### Added
-- Firebase integration
-- Navigation bar with four tabs
-- User profile display
-- Basic authentication flow
-
-### Changed
-- Updated project structure for better organization
-- Improved UI/UX with consistent styling
-
-### Fixed
-- Various UI layout issues
-- Navigation state management
-
-## [v0.3] - 2024-03-26
-
-### Added
 - Firebase integration with GoogleService-Info.plist
 - Authentication service with Firebase Auth
 - Navigation bar with four main tabs:
@@ -245,4 +157,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Firebase Core and Auth dependencies
 - Configured project with XcodeGen
 - Set up proper iOS deployment target and device family support
-- Added necessary privacy usage descriptions in Info.plist 
+- Added necessary privacy usage descriptions in Info.plist
+
+## [0.2.0] - 2024-03-17
+
+### Added
+- Basic navigation structure
+- Core UI components
+- User authentication
+- Settings management
+
+### Changed
+- Updated project structure
+- Enhanced UI design
+- Improved code organization
+- Refined user experience
+
+### Fixed
+- Initial setup issues
+- Basic functionality
+- UI consistency
+- Navigation flow
+
+### Removed
+- Legacy components
+- Unused features
+
+## [0.1.0] - 2024-03-16
+
+### Added
+- Initial project setup
+- Basic UI components
+- Project configuration
+- Development environment setup
+
+### Changed
+- Project structure
+- Development workflow
+- Code organization
+- Build configuration
+
+### Fixed
+- Initial setup
+- Basic functionality
+- Development environment
+- Project configuration
+
+### Removed
+- Legacy code
+- Unused components 
