@@ -2,13 +2,11 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var authService = AuthenticationService()
+    @StateObject private var settingsViewModel = SettingsViewModel()
     
     var body: some View {
         Group {
-            if !authService.isAuthenticated {
-                LoginView()
-                    .environmentObject(authService)
-            } else {
+            if authService.isAuthenticated {
                 TabView {
                     HomeView()
                         .tabItem {
@@ -35,9 +33,13 @@ struct ContentView: View {
                             Label("Settings", systemImage: "gear")
                         }
                 }
-                .accentColor(.blue)
+                .environmentObject(settingsViewModel)
+            } else {
+                LoginView()
+                    .environmentObject(authService)
             }
         }
+        .background(Color(uiColor: .systemBackground))
     }
 }
 

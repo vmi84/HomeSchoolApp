@@ -5,69 +5,149 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.1] - 2024-03-21
+## [0.4.2] - 2024-03-21
 
 ### Added
-- Student profile section with name and grade level
-- Subject management in settings
-- Ability to add, remove, and reorder subjects
-- Persistent background color support
+- Persistent background color across all screens
+- Scroll indicators for better navigation
+- Subject progress tracking with persistence
+- Interactive subject management interface
 
 ### Changed
-- Converted active subjects from horizontal scroll to column list
-- Improved learning style display with icon
-- Enhanced subject card design with better layout
-- Updated project configuration to preserve team settings
+- Improved learning style display in Home screen
+- Enhanced subject card layout for better space utilization
+- Updated navigation structure for better user flow
+- Refined UI spacing and padding for better visual hierarchy
+
+### Fixed
+- Learning style updates now properly reflect in Home screen
+- Subject progress updates now persist and display correctly
+- Background color consistency across all screens
+- Scroll bar visibility and functionality
 
 ### Removed
-- Redundant quick actions section
-- Horizontal scrolling for subjects
+- Redundant background color declarations
+- Unnecessary padding and spacing
+
+## [0.4.1] - 2024-03-20
+
+### Added
+- Student profile section with learning style display
+- Subject management in settings
+- Progress tracking for subjects
+- Interactive subject cards
+
+### Changed
+- Improved learning style display
+- Enhanced subject list layout
+- Updated background color handling
+- Refined UI spacing and padding
 
 ### Fixed
 - Team retention in project.yml
+- Navigation bar duplication
 - Background color persistence
 - Subject management interface
 
-## [0.4.0] - 2024-03-20
+### Removed
+- Redundant quick actions
+- Duplicate navigation bars
+
+## [0.4.0] - 2024-03-19
 
 ### Added
-- Welcome screen with login options
-- Developer Bypass functionality
-- Basic authentication service
-- Main app navigation structure
+- Learning style selection in Settings
+- Subject management interface
+- Progress tracking for subjects
+- Interactive subject cards
 
 ### Changed
-- Updated deployment target to iOS 16.0
-- Improved project structure
-- Enhanced UI consistency
+- Updated Home screen layout
+- Enhanced subject list display
+- Improved navigation structure
+- Refined UI components
 
 ### Fixed
-- UIKit-related issues
-- Color system compatibility
-- Navigation structure
+- Navigation bar issues
+- Background color consistency
+- Subject management functionality
+- Progress tracking persistence
 
-## [0.3.0] - 2024-03-19
+### Removed
+- Redundant UI elements
+- Unnecessary navigation components
+
+## [0.3.0] - 2024-03-18
 
 ### Added
-- Basic app structure
-- Initial views setup
-- Project configuration
+- Learning style selection
+- Subject management
+- Progress tracking
+- Interactive UI elements
 
 ### Changed
-- Updated project settings
-- Improved file organization
+- Updated navigation structure
+- Enhanced UI components
+- Improved user experience
+- Refined visual design
 
-## [0.2.0] - 2024-03-18
+### Fixed
+- Navigation issues
+- UI inconsistencies
+- Performance optimizations
+- Bug fixes
+
+### Removed
+- Redundant components
+- Unnecessary features
+
+## [0.2.0] - 2024-03-17
+
+### Added
+- Basic navigation structure
+- Core UI components
+- User authentication
+- Settings management
+
+### Changed
+- Updated project structure
+- Enhanced UI design
+- Improved code organization
+- Refined user experience
+
+### Fixed
+- Initial setup issues
+- Basic functionality
+- UI consistency
+- Navigation flow
+
+### Removed
+- Legacy components
+- Unused features
+
+## [0.1.0] - 2024-03-16
 
 ### Added
 - Initial project setup
-- Basic configuration files
+- Basic UI components
+- Project configuration
+- Development environment setup
 
-## [0.1.0] - 2024-03-17
+### Changed
+- Project structure
+- Development workflow
+- Code organization
+- Build configuration
 
-### Added
-- Initial commit
-- Project initialization
+### Fixed
+- Initial setup
+- Basic functionality
+- Development environment
+- Project configuration
+
+### Removed
+- Legacy code
+- Unused components
 
 ## [0.3.3] - 2024-03-21
 
